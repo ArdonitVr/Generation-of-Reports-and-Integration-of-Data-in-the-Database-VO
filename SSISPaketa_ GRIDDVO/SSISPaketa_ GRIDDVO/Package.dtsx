@@ -1,0 +1,1723 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/24/2022 3:10:06 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-1ITPAEV"
+  DTS:CreatorName="DESKTOP-1ITPAEV\Ardonit Vrella"
+  DTS:DTSID="{A5052202-85B5-4D06-9F0E-943537E459B4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{158089E8-5C8A-4DE8-8068-E4E4279CF57C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SSIS Paketa"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FCC2222D-426B-40D5-AEEE-5792AA2204C7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SSIS Paketa"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SSIS Paketa\Bashkimi"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Bashkimi"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[ID_Votuesi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Votuesi"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[ID_Votuesi]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Emri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Emri_Votuesit"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Emri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Mbiemri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Votuesit"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Mbiemri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Mosha_Votuesit]"
+                      cachedDataType="i4"
+                      cachedName="Mosha_Votuesit"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Mosha_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Vendbanimi_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vendbanimi_Votuesit"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Vendbanimi_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[ID_Kandidati]"
+                      cachedDataType="i4"
+                      cachedName="ID_Kandidati"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[ID_Kandidati]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[ID_Votuesi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Votuesi"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[ID_Votuesi]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Emri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Emri_Votuesit"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Emri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Mbiemri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Votuesit"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Mbiemri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Mosha_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Mosha_Votuesit"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Mosha_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Vendbanimi_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vendbanimi_Votuesit"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Vendbanimi_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[ID_Kandidati]"
+                      cachedDataType="i4"
+                      cachedName="ID_Kandidati"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[ID_Kandidati]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi]"
+                      name="ID_Votuesi"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[ID_Votuesi]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi (1)]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi (1)]"
+                      name="ID_Votuesi (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[ID_Votuesi]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit]"
+                      name="Emri_Votuesit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Emri_Votuesit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit (1)]"
+                      name="Emri_Votuesit (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Emri_Votuesit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit]"
+                      name="Mbiemri_Votuesit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Mbiemri_Votuesit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit (1)]"
+                      name="Mbiemri_Votuesit (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Mbiemri_Votuesit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mosha_Votuesit]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mosha_Votuesit]"
+                      name="Mosha_Votuesit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Mosha_Votuesit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mosha_Votuesit (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mosha_Votuesit (1)]"
+                      name="Mosha_Votuesit (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Mosha_Votuesit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit]"
+                      name="Vendbanimi_Votuesit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Vendbanimi_Votuesit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit (1)]"
+                      name="Vendbanimi_Votuesit (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Vendbanimi_Votuesit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati]"
+                      name="ID_Kandidati">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[ID_Kandidati]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati (1)]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati (1)]"
+                      name="ID_Kandidati (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[ID_Kandidati]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Fshiej"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Fshiej"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM griddvo_votuesit_ere WHERE ID_Votuesi=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\Fshiej.Connections[OleDbConnection]"
+                  connectionManagerID="{10E40EE6-89C6-4613-9A0F-590D25C5F6E2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-1ITPAEV.GRIDDVO]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Fshiej.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Fshiej.Inputs[OLE DB Command Input].Columns[ID_Votuesi (1)]"
+                      cachedDataType="i4"
+                      cachedName="ID_Votuesi (1)"
+                      externalMetadataColumnId="Package\SSIS Paketa\Fshiej.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Fshiej.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Fshiej.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SSIS Paketa\Fshiej.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Fshiej.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SSIS Paketa\Fshiej.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Fshiej.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Fshiej.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Fshiej.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Fshiej.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Kushti i Ndarjes"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Kushti i Ndarjes"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[ID_Votuesi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Votuesi"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[ID_Votuesi (1)]"
+                      cachedDataType="i4"
+                      cachedName="ID_Votuesi (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi (1)]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[Emri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Emri_Votuesit"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[Emri_Votuesit (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Emri_Votuesit (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit (1)]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[Mbiemri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Votuesit"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[Mbiemri_Votuesit (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Votuesit (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit (1)]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[Vendbanimi_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vendbanimi_Votuesit"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[Vendbanimi_Votuesit (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vendbanimi_Votuesit (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit (1)]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[ID_Kandidati]"
+                      cachedDataType="i4"
+                      cachedName="ID_Kandidati"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input].Columns[ID_Kandidati (1)]"
+                      cachedDataType="i4"
+                      cachedName="ID_Kandidati (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Fshiej]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Fshiej"
+                  synchronousInputId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi]}) &amp;&amp; ![ISNULL](#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(ID_Votuesi) &amp;&amp; !ISNULL([ID_Votuesi (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Ere]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Ere"
+                  synchronousInputId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi]}) &amp;&amp; [ISNULL](#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(ID_Votuesi) &amp;&amp; ISNULL([ID_Votuesi (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Perditeso]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Perditeso"
+                  synchronousInputId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">!(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi (1)]}) || !(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit (1)]}) || !(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit (1)]}) || !(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit (1)]}) || !(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!(ID_Votuesi == [ID_Votuesi (1)]) || !(Emri_Votuesit == [Emri_Votuesit (1)]) || !(Mbiemri_Votuesit == [Mbiemri_Votuesit (1)]) || !(Vendbanimi_Votuesit == [Vendbanimi_Votuesit (1)]) || !(ID_Kandidati == [ID_Kandidati (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Perditeso"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Perditeso"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE griddvo_votuesit_ere SET Emri_Votuesit=?, Mbiemri_Votuesit=?, Mosha_Votuesit=?, Vendbanimi_Votuesit=?, ID_Kandidati=? WHERE ID_Votuesi=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\Perditeso.Connections[OleDbConnection]"
+                  connectionManagerID="{10E40EE6-89C6-4613-9A0F-590D25C5F6E2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-1ITPAEV.GRIDDVO]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].Columns[Emri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Emri_Votuesit"
+                      externalMetadataColumnId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].Columns[Mbiemri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Votuesit"
+                      externalMetadataColumnId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].Columns[Mosha_Votuesit]"
+                      cachedDataType="i4"
+                      cachedName="Mosha_Votuesit"
+                      externalMetadataColumnId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mosha_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].Columns[Vendbanimi_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vendbanimi_Votuesit"
+                      externalMetadataColumnId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].Columns[ID_Kandidati]"
+                      cachedDataType="i4"
+                      cachedName="ID_Kandidati"
+                      externalMetadataColumnId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].Columns[ID_Votuesi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Votuesi"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="i4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Perditeso.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Perditeso.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Perditeso.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Perditeso.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Perditeso.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Perditeso.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Shto"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Shto"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[griddvo_votuesit_ere]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\Shto.Connections[OleDbConnection]"
+                  connectionManagerID="{10E40EE6-89C6-4613-9A0F-590D25C5F6E2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-1ITPAEV.GRIDDVO]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].Columns[ID_Votuesi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Votuesi"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[ID_Votuesi]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Votuesi]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].Columns[Emri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Emri_Votuesit"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[Emri_Votuesit]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].Columns[Mbiemri_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Votuesit"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[Mbiemri_Votuesit]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].Columns[Mosha_Votuesit]"
+                      cachedDataType="i4"
+                      cachedName="Mosha_Votuesit"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[Mosha_Votuesit]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mosha_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].Columns[Vendbanimi_Votuesit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Vendbanimi_Votuesit"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[Vendbanimi_Votuesit]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Vendbanimi_Votuesit]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].Columns[ID_Kandidati]"
+                      cachedDataType="i4"
+                      cachedName="ID_Kandidati"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[ID_Kandidati]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Kandidati]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[ID_Votuesi]"
+                      dataType="i4"
+                      name="ID_Votuesi" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[Emri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Emri_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[Mbiemri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Mbiemri_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[Mosha_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Mosha_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[Vendbanimi_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vendbanimi_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input].ExternalColumns[ID_Kandidati]"
+                      dataType="i4"
+                      name="ID_Kandidati" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Shto.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Shto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Shto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Shto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Shto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Votuesit"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Votuesit"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[griddvo_votuesit]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT ID_Votuesi, Emri_Votuesit, Mbiemri_Votuesit, Mosha_Votuesit, Vendbanimi_Votuesit, ID_Kandidati
+FROM griddvo_votuesit
+ORDER BY ID_Votuesi</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\Votuesit.Connections[OleDbConnection]"
+                  connectionManagerID="{10E40EE6-89C6-4613-9A0F-590D25C5F6E2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-1ITPAEV.GRIDDVO]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output]"
+                  isSorted="true"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[ID_Votuesi]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[ID_Votuesi]"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[ID_Votuesi]"
+                      name="ID_Votuesi"
+                      sortKeyPosition="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Emri_Votuesit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[Emri_Votuesit]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Emri_Votuesit]"
+                      name="Emri_Votuesit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Mbiemri_Votuesit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[Mbiemri_Votuesit]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Mbiemri_Votuesit]"
+                      name="Mbiemri_Votuesit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Mosha_Votuesit]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[Mosha_Votuesit]"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Mosha_Votuesit]"
+                      name="Mosha_Votuesit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Vendbanimi_Votuesit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[Vendbanimi_Votuesit]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[Vendbanimi_Votuesit]"
+                      name="Vendbanimi_Votuesit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[ID_Kandidati]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[ID_Kandidati]"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].Columns[ID_Kandidati]"
+                      name="ID_Kandidati"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[ID_Votuesi]"
+                      dataType="i4"
+                      name="ID_Votuesi" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[Emri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Emri_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[Mbiemri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Mbiemri_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[Mosha_Votuesit]"
+                      dataType="i4"
+                      name="Mosha_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[Vendbanimi_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vendbanimi_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output].ExternalColumns[ID_Kandidati]"
+                      dataType="i4"
+                      name="ID_Kandidati" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  isSorted="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[ID_Votuesi]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[ID_Votuesi]"
+                      name="ID_Votuesi"
+                      sortKeyPosition="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[Emri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[Emri_Votuesit]"
+                      name="Emri_Votuesit" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[Mbiemri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[Mbiemri_Votuesit]"
+                      name="Mbiemri_Votuesit" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[Mosha_Votuesit]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[Mosha_Votuesit]"
+                      name="Mosha_Votuesit" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[Vendbanimi_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[Vendbanimi_Votuesit]"
+                      name="Vendbanimi_Votuesit" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[ID_Kandidati]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[ID_Kandidati]"
+                      name="ID_Kandidati" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Votuesit_ere"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Votuesit_ere"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT ID_Votuesi, Emri_Votuesit, Mbiemri_Votuesit, Mosha_Votuesit, Vendbanimi_Votuesit, ID_Kandidati
+FROM griddvo_votuesit_ere
+ORDER BY ID_Votuesi</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\Votuesit_ere.Connections[OleDbConnection]"
+                  connectionManagerID="{10E40EE6-89C6-4613-9A0F-590D25C5F6E2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-1ITPAEV.GRIDDVO]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output]"
+                  isSorted="true"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[ID_Votuesi]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[ID_Votuesi]"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[ID_Votuesi]"
+                      name="ID_Votuesi"
+                      sortKeyPosition="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Emri_Votuesit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[Emri_Votuesit]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Emri_Votuesit]"
+                      name="Emri_Votuesit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Mbiemri_Votuesit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[Mbiemri_Votuesit]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Mbiemri_Votuesit]"
+                      name="Mbiemri_Votuesit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Mosha_Votuesit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[Mosha_Votuesit]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Mosha_Votuesit]"
+                      name="Mosha_Votuesit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Vendbanimi_Votuesit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[Vendbanimi_Votuesit]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[Vendbanimi_Votuesit]"
+                      name="Vendbanimi_Votuesit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[ID_Kandidati]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[ID_Kandidati]"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].Columns[ID_Kandidati]"
+                      name="ID_Kandidati"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[ID_Votuesi]"
+                      dataType="i4"
+                      name="ID_Votuesi" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[Emri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Emri_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[Mbiemri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Mbiemri_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[Mosha_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Mosha_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[Vendbanimi_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vendbanimi_Votuesit" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output].ExternalColumns[ID_Kandidati]"
+                      dataType="i4"
+                      name="ID_Kandidati" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  isSorted="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[ID_Votuesi]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[ID_Votuesi]"
+                      name="ID_Votuesi"
+                      sortKeyPosition="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[Emri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[Emri_Votuesit]"
+                      name="Emri_Votuesit" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[Mbiemri_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[Mbiemri_Votuesit]"
+                      name="Mbiemri_Votuesit" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[Mosha_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[Mosha_Votuesit]"
+                      name="Mosha_Votuesit" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[Vendbanimi_Votuesit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[Vendbanimi_Votuesit]"
+                      name="Vendbanimi_Votuesit" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[ID_Kandidati]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[ID_Kandidati]"
+                      name="ID_Kandidati" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SSIS Paketa.Paths[Ere]"
+              endId="Package\SSIS Paketa\Shto.Inputs[OLE DB Destination Input]"
+              name="Ere"
+              startId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Ere]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[Fshiej]"
+              endId="Package\SSIS Paketa\Fshiej.Inputs[OLE DB Command Input]"
+              name="Fshiej"
+              startId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Fshiej]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[Merge Join Output]"
+              endId="Package\SSIS Paketa\Kushti i Ndarjes.Inputs[Conditional Split Input]"
+              name="Merge Join Output"
+              startId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[OLE DB Source Output]"
+              endId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input]"
+              name="OLE DB Source Output"
+              startId="Package\SSIS Paketa\Votuesit.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[OLE DB Source Output1]"
+              endId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input]"
+              name="OLE DB Source Output"
+              startId="Package\SSIS Paketa\Votuesit_ere.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[Perditeso]"
+              endId="Package\SSIS Paketa\Perditeso.Inputs[OLE DB Command Input]"
+              name="Perditeso"
+              startId="Package\SSIS Paketa\Kushti i Ndarjes.Outputs[Perditeso]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="136,42.6666666666667"
+          Id="Package\SSIS Paketa"
+          TopLeft="83.5511351186271,65.531817010018" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\SSIS Paketa">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="100.666666666667,42.6666666666667"
+          Id="Package\SSIS Paketa\Shto"
+          TopLeft="160.405526638041,277.263236223036" />
+        <NodeLayout
+          Size="138,42.6666666666667"
+          Id="Package\SSIS Paketa\Votuesit_ere"
+          TopLeft="520.648649140388,48.2720770589059" />
+        <NodeLayout
+          Size="106.666666666667,42.6666666666667"
+          Id="Package\SSIS Paketa\Fshiej"
+          TopLeft="569.428563025382,272.691265063518" />
+        <NodeLayout
+          Size="117.333333333334,42.6666666666667"
+          Id="Package\SSIS Paketa\Votuesit"
+          TopLeft="178.724606061405,46.4372286068671" />
+        <NodeLayout
+          Size="121.333333333334,42.6666666666667"
+          Id="Package\SSIS Paketa\Bashkimi"
+          TopLeft="353.953818679501,133.908439163972" />
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[OLE DB Source Output1]"
+          TopLeft="589.648649140388,90.9387437255726">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-156.139274905332,42.9696954383995"
+              Start="0,0"
+              End="-156.139274905332,35.4696954383995">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4462621576639" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4462621576639"
+                    Point2="0,25.4462621576639"
+                    Point3="-4,25.4462621576639" />
+                  <mssgle:LineSegment
+                    End="-152.139274905332,25.4462621576639" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-152.139274905332,25.4462621576639"
+                    Point2="-156.139274905332,25.4462621576639"
+                    Point3="-156.139274905332,29.4462621576639" />
+                  <mssgle:LineSegment
+                    End="-156.139274905332,35.4696954383995" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[OLE DB Source Output]"
+          TopLeft="237.391272728072,89.1038952735338">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="158.340323729207,44.8045438904383"
+              Start="0,0"
+              End="158.340323729207,37.3045438904383">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5328426943376" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5328426943376"
+                    Point2="0,26.5328426943376"
+                    Point3="4,26.5328426943376" />
+                  <mssgle:LineSegment
+                    End="154.340323729207,26.5328426943376" />
+                  <mssgle:CubicBezierSegment
+                    Point1="154.340323729207,26.5328426943376"
+                    Point2="158.340323729207,26.5328426943376"
+                    Point3="158.340323729207,30.5328426943376" />
+                  <mssgle:LineSegment
+                    End="158.340323729207,37.3045438904383" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153.333333333334,42.6666666666667"
+          Id="Package\SSIS Paketa\Kushti i Ndarjes"
+          TopLeft="323.749995175749,244.999996513128" />
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[Merge Join Output]"
+          TopLeft="414.620485346168,176.575105830639">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.2038235037518,68.4248906824897"
+              Start="0,0"
+              End="-14.2038235037518,60.9248906824897">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.2124453412448" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.2124453412448"
+                    Point2="0,34.2124453412448"
+                    Point3="-4,34.2124453412448" />
+                  <mssgle:LineSegment
+                    End="-10.2038235037518,34.2124453412448" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10.2038235037518,34.2124453412448"
+                    Point2="-14.2038235037518,34.2124453412448"
+                    Point3="-14.2038235037518,38.2124453412448" />
+                  <mssgle:LineSegment
+                    End="-14.2038235037518,60.9248906824897" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[Ere]"
+          TopLeft="323.749995175749,266.333329846462">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-62.6778018710415,32.2632397099077"
+              Start="0,0"
+              End="-55.1778018710415,32.2632397099077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-27.3389009355207,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27.3389009355207,0"
+                    Point2="-31.3389009355207,0"
+                    Point3="-31.3389009355207,4" />
+                  <mssgle:LineSegment
+                    End="-31.3389009355207,28.2632397099077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.3389009355207,28.2632397099077"
+                    Point2="-31.3389009355207,32.2632397099077"
+                    Point3="-35.3389009355207,32.2632397099077" />
+                  <mssgle:LineSegment
+                    End="-55.1778018710415,32.2632397099077" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-39.0752485917707,-15.3974609375,15.4726953125,9.3974609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[Fshiej]"
+          TopLeft="477.083328509083,266.333329846462">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92.3452345162995,27.6912685503897"
+              Start="0,0"
+              End="84.8452345162995,27.6912685503897">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="42.1726172581497,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.1726172581497,0"
+                    Point2="46.1726172581497,0"
+                    Point3="46.1726172581497,4" />
+                  <mssgle:LineSegment
+                    End="46.1726172581497,23.6912685503897" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.1726172581497,23.6912685503897"
+                    Point2="46.1726172581497,27.6912685503897"
+                    Point3="50.1726172581497,27.6912685503897" />
+                  <mssgle:LineSegment
+                    End="84.8452345162995,27.6912685503897" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.0621680393997,-17.6630859375,26.2208984375,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="122.666666666667,42.6666666666667"
+          Id="Package\SSIS Paketa\Perditeso"
+          TopLeft="346.833328453203,331.499994072318" />
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[Perditeso]"
+          TopLeft="404.291661814476,287.666663179795">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.8333308925231"
+              Start="0,0"
+              End="0,36.3333308925231">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.3333308925231" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.83203125,13.2921537275116,41.6640625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SSIS Paketa\Shto">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SSIS Paketa\Votuesit_ere">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SSIS Paketa\Votuesit">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

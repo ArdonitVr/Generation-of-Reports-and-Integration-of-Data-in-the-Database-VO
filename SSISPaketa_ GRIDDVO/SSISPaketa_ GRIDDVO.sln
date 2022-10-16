@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1778
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSISPaketa_ GRIDDVO", "SSISPaketa_ GRIDDVO\SSISPaketa_ GRIDDVO.dtproj", "{073F762A-E5ED-4E17-9D81-99DDB422B7D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{073F762A-E5ED-4E17-9D81-99DDB422B7D4}.Development|Default.ActiveCfg = Development
+		{073F762A-E5ED-4E17-9D81-99DDB422B7D4}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCC86E5F-AB9E-454D-A9F0-4BCA41382F0F}
+	EndGlobalSection
+EndGlobal

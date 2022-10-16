@@ -1,0 +1,155 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2f2b418d-0b20-4e33-9935-8fcd4c54d049" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>GRIDDVO</ID>
+  <Name>GRIDDVO</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="e8dfcacf-dacd-4204-a2c9-b800dfe39e5c">
+      <ID>Griddvo Votuesit</ID>
+      <Name>Griddvo Votuesit</Name>
+      <DimensionID>Griddvo Votuesit</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="20f7ff29-da7f-4269-91cc-fb0b5c5f5219">
+          <AttributeID>ID Votuesi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="268a851a-3168-4f4e-b9cc-0dc6d0e7d38d">
+          <AttributeID>Emri Votuesit</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5a1a1602-f6ce-4fd0-9ff5-3d97e82e3cc9">
+          <AttributeID>Mbiemri Votuesit</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c5f5cdb0-2e31-4f81-a881-5a63ac2bc0e1">
+          <AttributeID>Mosha Votuesit</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="df2a8f24-f8e6-42da-b3fe-8eaf22c29bc7">
+          <AttributeID>Vendbanimi Votuesit</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e52b36f2-1778-4562-a3dd-740088877022">
+          <AttributeID>ID Kandidati</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e535e86b-c34a-4e88-bc9a-0ac80c9e55ec">
+          <AttributeID>Kandidati</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c8e266e9-6d42-4970-9081-535786b362c7">
+      <ID>Griddvo Kandidatet</ID>
+      <Name>Griddvo Kandidatet</Name>
+      <DimensionID>Griddvo Kandidatet</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ee7a10cf-2b8d-4a05-9b37-7be606bc1da9">
+          <AttributeID>ID Kandidati</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e252c511-6953-43d8-ac39-043246a7f45a">
+          <AttributeID>Kandidati</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="3b280f9b-bccd-4164-bab9-2dfa7f3a510a">
+      <ID>Griddvo Votuesit</ID>
+      <Name>Griddvo Votuesit</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="69a0a5e1-6d8f-478c-8c8f-ca91ca19e0bd">
+          <ID>Mosha Votuesit</ID>
+          <Name>Mosha Votuesit</Name>
+          <Source dwd:design-time-name="35b10988-7eeb-4438-8d92-f726e2810bf9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5961c599-2114-4578-b199-1984a29d596f">
+              <TableID>dbo_griddvo_votuesit</TableID>
+              <ColumnID>Mosha_Votuesit</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="7333780e-c5b7-4659-a187-209bcd4376f0">
+          <CubeDimensionID>Griddvo Votuesit</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7974ffe6-e8d9-4299-9a62-bfe3b9d72454">
+              <AttributeID>ID Votuesi</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4dcc263e-b575-44e7-9ca1-4710bc847c46">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ace3ab4e-6101-4f24-8fc4-455db04ad892">
+                    <TableID>dbo_griddvo_votuesit</TableID>
+                    <ColumnID>ID_Votuesi</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6a098250-15ef-4ade-b33a-89ea8c4b8d83">
+          <CubeDimensionID>Griddvo Kandidatet</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="810d1568-f7aa-4312-950d-b82200a051bd">
+              <AttributeID>ID Kandidati</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1b41bfaf-fe89-4d76-b7b7-e45ae227d6b0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e5174ab0-9db7-412e-afa6-bf3c05ab34a2">
+                    <TableID>dbo_griddvo_votuesit</TableID>
+                    <ColumnID>ID_Kandidati</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="69963a7f-f9b4-48f3-931a-679284427068">
+    <DataSourceViewID>GRIDDVO</DataSourceViewID>
+  </Source>
+</Cube>

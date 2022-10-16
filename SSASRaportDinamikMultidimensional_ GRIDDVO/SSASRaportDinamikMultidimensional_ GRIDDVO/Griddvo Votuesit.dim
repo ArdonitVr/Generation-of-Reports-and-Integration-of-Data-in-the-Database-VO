@@ -1,0 +1,202 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c19d5922-4943-48c9-8bcc-f6472d932703" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Griddvo Votuesit</ID>
+  <Name>Griddvo Votuesit</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8fc1d815-177f-48df-8229-2f6bca2eb99f">
+    <DataSourceViewID>GRIDDVO</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="51453980-8b96-4523-868e-ba694f66d249">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="7a9190d8-8cea-49a1-b9f1-6efceb4bcd60">
+      <ID>ID Votuesi</ID>
+      <Name>ID Votuesi</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="233e7d06-e6e7-422d-a94a-1d2fb39a845c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="928de1f0-ff27-48ab-adb4-dc58bfc27ee4">
+            <TableID>dbo_griddvo_votuesit</TableID>
+            <ColumnID>ID_Votuesi</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1b8afeec-7081-441a-895d-1e3807c56874">
+          <AttributeID>Emri Votuesit</AttributeID>
+          <Name>Emri Votuesit</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fc944c83-a67f-43a8-b40c-ccbf113dd04d">
+          <AttributeID>Mbiemri Votuesit</AttributeID>
+          <Name>Mbiemri Votuesit</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dc113c0e-375a-4b5b-8451-d3ba987e7704">
+          <AttributeID>Mosha Votuesit</AttributeID>
+          <Name>Mosha Votuesit</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0f55c932-94b9-456b-94ee-c739494ab879">
+          <AttributeID>Vendbanimi Votuesit</AttributeID>
+          <Name>Vendbanimi Votuesit</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5361c0ea-8a0e-4db4-baef-5008a736b9cb">
+          <AttributeID>ID Kandidati</AttributeID>
+          <Name>ID Kandidati</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2793c5ba-d395-4963-a4a2-d209f81cfaca">
+      <ID>Emri Votuesit</ID>
+      <Name>Emri Votuesit</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6ac500cc-2003-40a1-834b-053fe3f2b8a9">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="94725962-bf81-442d-a333-d350b4d6e85d">
+            <TableID>dbo_griddvo_votuesit</TableID>
+            <ColumnID>Emri_Votuesit</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1744e833-e068-42b8-810c-ee24d6d56912">
+      <ID>Mbiemri Votuesit</ID>
+      <Name>Mbiemri Votuesit</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f02533fd-c415-4e4f-a94a-0f277d445a31">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9e7c95d-1e90-4f0e-a3c9-3dc8a871db83">
+            <TableID>dbo_griddvo_votuesit</TableID>
+            <ColumnID>Mbiemri_Votuesit</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f813b805-2f31-4691-a2dc-658b77b07ec0">
+      <ID>Mosha Votuesit</ID>
+      <Name>Mosha Votuesit</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="00cba327-f60f-47de-9433-d9bb0446edf2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6c53e9ba-547b-4730-b120-37d611cba991">
+            <TableID>dbo_griddvo_votuesit</TableID>
+            <ColumnID>Mosha_Votuesit</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="082b6ec3-b4c0-4f06-a490-386d433337ff">
+      <ID>Vendbanimi Votuesit</ID>
+      <Name>Vendbanimi Votuesit</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15d27720-fa75-4785-bcce-b9a5a7bb3e11">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cfda2ebb-811c-484d-a611-cdbd208b9e43">
+            <TableID>dbo_griddvo_votuesit</TableID>
+            <ColumnID>Vendbanimi_Votuesit</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0c192f5a-3cda-4c87-a5d3-0d301d57a5c2">
+      <ID>ID Kandidati</ID>
+      <Name>ID Kandidati</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="57bd2491-0bb2-4256-b0f1-fa1c268690fe">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c24cba0e-ab8e-4945-a86e-7a7054d9e455">
+            <TableID>dbo_griddvo_kandidatet</TableID>
+            <ColumnID>ID_Kandidati</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f3198aca-57dc-4d9c-aafc-db695839b5c1">
+          <AttributeID>Kandidati</AttributeID>
+          <Name>Kandidati</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2809f781-542d-46d5-8308-8e70963617c3">
+      <ID>Kandidati</ID>
+      <Name>Kandidati</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cd7379b5-0c0f-4885-940d-fd94e3f26f77">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d14b13e1-bbc3-401a-beef-0df70b3424e3">
+            <TableID>dbo_griddvo_kandidatet</TableID>
+            <ColumnID>Kandidati</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
